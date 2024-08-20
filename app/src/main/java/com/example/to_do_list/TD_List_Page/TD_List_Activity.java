@@ -9,16 +9,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.example.to_do_list.DashData.MainActivity;
 import com.example.to_do_list.Model.ToDoModel;
 import com.example.to_do_list.R;
 import com.example.to_do_list.RecyclerViewTouchHelper;
@@ -26,7 +21,7 @@ import com.example.to_do_list.Utils.AddNewTask;
 import com.example.to_do_list.Utils.DataBaseHelper;
 import com.example.to_do_list.Utils.OnDialogCloseListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.auth.FirebaseAuth;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -37,11 +32,10 @@ public class TD_List_Activity extends AppCompatActivity implements OnDialogClose
     private static final String TAG = "TD_List_Activity";
 
     private RecyclerView mrecyclerView;
-    private FloatingActionButton fab;
     private List<ToDoModel> mList;
     private ToDoAdapter adapter;
     private DataBaseHelper myDB;
-    private ImageView nodatafound, logout;
+    private ImageView nodatafound;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -54,9 +48,9 @@ public class TD_List_Activity extends AppCompatActivity implements OnDialogClose
 
         // Initialize views
         mrecyclerView = findViewById(R.id.recyclerView);
-        fab = findViewById(R.id.floatingBTN);
+        FloatingActionButton fab = findViewById(R.id.floatingBTN);
         nodatafound = findViewById(R.id.nodatafound);
-        logout = findViewById(R.id.logout);
+        ImageView logout = findViewById(R.id.logout);
 
         // Initialize the list and database helper
         mList = new ArrayList<>();
@@ -125,11 +119,11 @@ public class TD_List_Activity extends AppCompatActivity implements OnDialogClose
     }
 
 
-    @SuppressLint("MissingSuperCall")
     @Override
-    public void onBackPressed() {
+    public void onBackPressedDispatcher() {
         showExitConfirmationDialog();
     }
+
 
     private void showExitConfirmationDialog() {
         new AlertDialog.Builder(this)
