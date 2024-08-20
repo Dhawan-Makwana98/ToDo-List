@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_top_corner"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="@color/appColor"
+            android:text="Add Task"
+            android:textSize="32dp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:layout_height="3sp"
+            android:layout_below="@+id/text1"
+            android:layout_above="@+id/edt_task"
+            android:layout_marginBottom="3dp"
+            android:background="@color/black"/>
+
+        <EditText
+            android:id="@+id/edt_task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text1"
+            android:textColorHint="@color/black"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/appColor"
+            android:hint="Click to enter a new Task"
+            android:paddingStart="7dp"
+            android:paddingEnd="7dp" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_below="@id/edt_task"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="42dp"
+            android:text="Add Task"
+            android:backgroundTint="#FF888888"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

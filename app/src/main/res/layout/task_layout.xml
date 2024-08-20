@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="6dp"
+    android:outlineAmbientShadowColor="@color/appColor"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F5F5DC"
+        android:padding="8dp">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/taskCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/appColor"
+            android:paddingStart="5dp"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/taskText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/taskCheckBox"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/appColor"
+            android:textSize="22sp"/>
+        <ImageView
+            android:id="@+id/doneImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_done_outline_24"
+            android:layout_marginTop="14dp"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

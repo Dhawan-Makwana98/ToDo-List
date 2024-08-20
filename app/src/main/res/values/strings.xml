@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">To-Do-List</string>
+    <string name="welcome_message"><![CDATA[<b>Welcome,</b> Glad to see you!]]></string>
+
+</resources>

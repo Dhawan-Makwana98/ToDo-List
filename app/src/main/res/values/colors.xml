@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="appColor">#560C98</color>
+    <color name="delete">#DD0000</color>
+    <color name="edit">#239F15</color>
+    <color name="gray">#FF888888</color>
+    <color name="addtask">#F4F4DB</color>
+    <color name="MainscreenColor">#CE9CFA</color>
+</resources>
